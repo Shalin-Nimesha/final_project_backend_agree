@@ -11,9 +11,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     )
     password = serializers.CharField(write_only=True, min_length=8)
     
-    # You will need to handle extra fields from Signup.tsx (e.g., role, farmLocation)
-    # For now, let's include the fields that map directly to the User model.
-    # BEST PRACTICE: Use a Custom User Model to natively include fields like 'mobileNumber' and 'role'.
+
+ 
 
     class Meta:
         model = User

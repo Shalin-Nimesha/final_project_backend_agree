@@ -5,6 +5,11 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import UserRegistrationSerializer, CustomTokenObtainPairSerializer
 
+
+
+
+
+
 # --- Signup API Endpoint ---
 class RegisterView(APIView):
     permission_classes = () # Allow any user to access this view

@@ -33,16 +33,12 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         # Add custom claims/user info to the token payload if needed
         token['username'] = user.username
         # token['role'] = user.role # If you have a custom User model
-
         
-
         return token
 
     def validate(self, attrs):
         # The parent validation handles authentication (username/password check)
         data = super().validate(attrs)
-
-
         
         # Include user details in the login response
         data['user'] = {
